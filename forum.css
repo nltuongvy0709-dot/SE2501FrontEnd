@@ -1,9 +1,10 @@
+
 *{
     font-family: Arial, Helvetica, sans-serif;
 }
 
 :root {
-    --main -padding: 1rem;
+    --main-padding: 1rem;
 }
 
 /* CSS HEADER */
@@ -115,4 +116,3 @@ footer {
     padding: 2rem;
     margin-top: 5px;
 }
-
