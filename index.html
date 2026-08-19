@@ -4,8 +4,10 @@
         <meta charset="UTR-8">
         <title> Trang chủ </title>
         <link href="book.css" rel="stylesheet"/>
+        <link href="modal.css" rel="stylesheet"/>
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css" rel="stylesheet"/>
         <link href="logo.png" rel="shortcut icon"/>
+        <script src="book.js" defer></script>
     </head>
     <body>
         <header>
@@ -21,6 +23,10 @@
                         </ul>
                     </li>
                     <li><a href="forum.html"><i class="fa-brands fa-stack-exchange"></i> Diễn đàn </a></li>
+                    <li>
+                        <button class="btn btn-succes" onclick="openRegisterModal(this)" rel="registerModal"><i class="fa-solid fa-circle-user"></i> Đăng ký </button>
+                        <button class="btn btn-info"><i class="fa-solid fa-right-to-bracket"></i> Đăng nhập </button>
+                    </li>
                 </ul>
             </nav>
             <h1 class="subject"> Danh mục sách </h1>
@@ -29,7 +35,7 @@
         <section class="books flex">
             <div class="book">
                 <div>
-                    <img src="1.jpg" alt ="Book"/>
+                    <a href="details.html"><img src="1.jpg" alt ="Book"/></a>
                     <h3> Phát triển ứng dụng </h3>
                     <p> 200.000 VNĐ </p>
                     <a href="#" class="close">&times;</a>
@@ -46,7 +52,7 @@
             <div class="book">
                 <div>
                     <img src="3.png" alt ="Book"/>
-                    <h3> Giaso trình trí tuệ nhân tạo </h3>
+                    <h3> Giao trình trí tuệ nhân tạo </h3>
                     <p> 200.000 VNĐ </p>
                     <a href="#" class="close">&times;</a>
                 </div>
@@ -152,5 +158,36 @@
         <footer>
             <span><b> OU WEB DESIGN &COPY; 2026 </b></span>
         </footer>
+
+        
+    <div class="modal flex h-center modal-hide" id="registerModal"> 
+        <div class="modal-content">
+            <a href="#" class="modal-close" onclick="closeModal(this)" rel="registerModal">&times;</a>
+            <div class="control">
+                <p> Họ tên: </p>
+                <input type="text" placeholder="Họ tên" class="input-control"/>
+            </div>
+            <div class="control">
+                <p> Email: </p>
+                <input type="email" placeholder="Email" class="input-control"/>
+            </div>
+            <div class="control">
+                <p> Tên đăng nhập: </p>
+                <input type="text" placeholder="Tên đăng nhập" class="input-control"/>
+            </div>
+            <div class="control">
+                <p> Mật khẩu: </p>
+                <input type="password" placeholder="Mật khẩu" class="input-control"/>
+            </div>
+            <div class="control">
+                <p> Xác nhận mật khẩu: </p>
+                <input type="password" placeholder="Xác nhận mật khẩu" class="input-control"/>
+            </div>
+            <div class="control btn-control">
+                <button class="btn btn-succes"> Đăng ký </button>
+            </div>
+        </div>
+    </div>
+
     </body>
 </html>

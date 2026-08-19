@@ -8,6 +8,9 @@
     <link href="details.css" rel="stylesheet" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css" rel="stylesheet"/>
     <link href="logo.png" rel="shortcut icon"/>
+    <script src="details.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.30.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.30.1/moment-with-locales.min.js"></script>
 </head>
 <body>
     <header>
@@ -23,13 +26,25 @@
                 </ul>
             </li>
             <li><a href="forum.html"><i class="fa-brands fa-stack-exchange"></i> Diễn đàn </a></li>
+            <li>
+                <button class="btn btn-succes"><i class="fa-solid fa-circle-user"></i> Đăng ký </button>
+                <button class="btn btn-info"><i class="fa-solid fa-right-to-bracket"></i> Đăng nhập </button>
+            </li>
         </ul>
          </nav>
         <h1 class="subject"> Chi tiết sách </h1>
     </header>
     <section class="cotainer flex">
         <div class="col20">
-            <img src="1.jpg" alt="Book" />
+            <img src="1.jpg" alt="Book" id="main-img"/>
+
+            <div class="thumbs flex">
+                <div><img src="1.jpg" alt="Book" /></div>
+                <div><img src="t01.png" alt="Book" /></div>
+                <div><img src="t02.png" alt="Book" /></div>
+                <div><img src="t03.png" alt="Book" /></div>
+                <div><img src="t04.png" alt="Book" /></div>
+            </div>
         </div>
         <div class="col80">
         <h2> Thiết kế web </h2>
@@ -68,7 +83,7 @@
             <li><a href="#"><i class="fa-regular fa-star"></i></a></li>
         </ul>
 
-        <button class="btn"><i class="fa-solid fa-cart-shopping"></i> Mua hàng </button>
+        <button class="btn btn-succes"><i class="fa-solid fa-cart-shopping"></i><b> Mua hàng </b></button>
         </div>
     </section>
 
@@ -91,9 +106,9 @@
 
     <section class="review container">
         <div class="review-from">
-            <textarea placeholder="Nội dung bình luận ... "></textarea>
+            <textarea placeholder="Nội dung bình luận ... " id="comment-content"></textarea>
             <div class="btn">
-                <button class="add-comment"><i class="fa-regular fa-comment"></i> Thêm bình luận </button>
+                <button onclick="addComment()" class="btn btn-succes"><i class="fa-regular fa-comment"></i><b> Thêm bình luận </b></button>
             </div>
         </div>
     </section>
@@ -156,5 +171,6 @@
             </li>
         </ul>
     </section>
+
 </body>
 </html>
